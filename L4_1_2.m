@@ -1,0 +1,9 @@
+x = [1 1 2 1 2 2 1 1]';
+num = [4 2.4 -1.6];
+denom = [1 -0.5 0.6];
+y_2 = direct(num,denom,x);
+[y3, vout2] = tran(num,denom,x)
+[y_1, vout1] = filter(num,denom,x)
+err = norm(vout1-vout2')
+filter_err = norm(y_1-y_2')
+trans_err = norm(y_1-y3')
